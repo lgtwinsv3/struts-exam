@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="boardActionForm" type="com.ej.example.domain.BoardActionForm" />
+		<form-bean name="memberActionForm" type="com.ej.example.domain.MemberActionForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/board" type="com.ej.example.action.board.BoardAction"
+			scope="request" parameter="method" name="boardActionForm">
+			<forward name="list" path="/board/board_list.jsp" />
+			<forward name="postForm" path="/board/board_post_form.jsp" />
+			<forward name="read" path="/board/board_view.jsp" />
+			<forward name="updateForm" path="/board/board_update_form.jsp" />
+		</action>
+		
+		<action path="/member" type="com.ej.example.action.member.MemberAction"
+			scope="request" parameter="method" name="memberActionForm">
+			<forward name="list" path="/member/member_list.jsp" />
+			<forward name="postForm" path="/member/member_post_form.jsp" />
+			<forward name="read" path="/member/member_view.jsp" />
+			<forward name="updateForm" path="/member/member_update_form.jsp" />
+		</action>
+	</action-mappings>
+
+
+</struts-config>
+

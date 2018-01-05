@@ -1,0 +1,7 @@
+post=com.ej.example.action.board.CreateBoardAction
+post_form=com.ej.example.action.board.CreateBoardFormAction
+read=com.ej.example.action.board.ReadBoardAction
+update=com.ej.example.action.board.UpdateBoardAction
+update_form=com.ej.example.action.board.UpdateBoardFormAction
+delete=com.ej.example.action.board.DeleteBoardAction
+list=com.ej.example.action.board.ListBoardAction
